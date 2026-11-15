@@ -1,0 +1,102 @@
+/* ════════════════════════════════════════════════════════════
+   GLOBAL STYLES  —  Rezerwacja Paznokci
+   ════════════════════════════════════════════════════════════ */
+
+:root {
+  --primary: #ffc4e0;
+  --primary-dark: #ff9ecb;
+  --primary-darker: #e87aad;
+  --primary-light: #ffe0f0;
+  --primary-lighter: #fff0f7;
+  --accent: #d4627e;
+  --text-dark: #2d1f2d;
+  --text-medium: #5a3d5a;
+  --text-light: #8a6a8a;
+  --white: #ffffff;
+  --success-from: #6bcb77;
+  --success-to: #4caf50;
+  --danger: #e74c3c;
+  --glass-bg: rgba(255, 240, 247, 0.88);
+  --glass-border: rgba(255, 196, 224, 0.55);
+  --shadow: 0 8px 32px rgba(45, 31, 45, 0.12);
+  --shadow-lg: 0 20px 60px rgba(45, 31, 45, 0.22);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d4a88c;
+  background-image: url('/panterka.jfif');
+  background-repeat: repeat;
+  background-size: 280px 280px;
+  min-height: 100vh;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Delikatny overlay na tle */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 196, 224, 0.18) 0%,
+    rgba(255, 240, 247, 0.10) 50%,
+    rgba(255, 196, 224, 0.14) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 48px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 14px 8px 36px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
